@@ -176,7 +176,6 @@ main .content section:first-of-type .text {
 }
 
 main .content section:first-of-type .text p {
-  /* margin-bottom: 50px; */
   position: relative;
 }
 
@@ -193,6 +192,12 @@ main .content section:first-of-type p:first-of-type {
   font-size: 1.25rem;
   margin-top: 0;
   font-weight: bold;
+  margin-bottom: 50px;
+}
+
+main .content section:first-of-type .text p:first-of-type::after {
+  content: none;
+  display: none;
 }
 
 /*** Featured services ***/
