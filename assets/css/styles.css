@@ -4,6 +4,7 @@
   --text-color: rgb(25, 26, 26);
   --text-color-secondary: #ffffff;
   --background-color: #ffffff;
+  --background-color-secondary: #e3e3e3ff;
 }
 
 * {
@@ -203,7 +204,7 @@ main .content section .services-list {
 }
 
 main .content section .services-list .service {
-  background-color: var(--secondary-color);
+  background-color: var(--background-color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
