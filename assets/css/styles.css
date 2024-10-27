@@ -1,0 +1,214 @@
+:root {
+  --primary-color: #aa2342ff; 
+  --secondary-color: #d591a1ff;
+  --text-color: rgb(25, 26, 26);
+  --text-color-secondary: #ffffff;
+  --background-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/*** Global ***/
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/*** Nav ***/
+nav {
+  /* background-color: var(--secondary-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav .nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1190px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: var(--secondary-color);
+  color: var(--text-color-secondary);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);;
+}
+
+nav ul li:hover {
+  background-color: var(--primary-color);
+}
+
+nav ul li a {
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*** content ***/
+.content {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 80px 0 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*** Header ***/
+header {
+  background-image: url("../img/firma.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+  text-transform: uppercase;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, 
+    #ffffff00 10%,    /* Transparente al inicio */
+    #f7ecef11 30%,    /* Color suave en el primer tercio */
+    #be5c7393 60%,    /* Color medio en el segundo tercio */
+    #a72242cc 90%     /* Color oscuro en el borde final */
+  );
+  /* background: radial-gradient(circle, #ffffff00, #f7ecef11, #be5c7393, #a72242cc); */
+  /* background: radial-gradient(circle, #a72242cc, #be5c7393, #f7ecef11, #ffffff00); */
+  z-index: 1; /* Asegura que esté detrás del contenido */
+}
+
+header h2 {
+  color: var(--text-color);
+}
+
+header .content {
+  padding: 0 0 80px 0;
+  z-index: 2;
+}
+
+/*** Main ***/
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .content section {
+  width: 100%;
+  margin: 100px 0 0 0;
+}
+
+main .content section p span {
+  font-weight: bold;
+}
+
+/*** Abogado en Murcia ***/
+main .content section:first-of-type {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+main .content section:first-of-type .image {
+  width: 50%;
+  max-height: 386px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: url(../img/balanza_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main .content section:first-of-type .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+main .content section:first-of-type .text p {
+  /* margin-bottom: 50px; */
+  position: relative;
+}
+
+main .content section:first-of-type .text p:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  width: 102px;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 25px auto;
+}
+
+main .content section:first-of-type p:first-of-type {
+  font-size: 1.25rem;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+/*** Featured services ***/
+main .content section .services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+}
+
+main .content section .services-list .service {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 146px;
+  padding: 20px;
+  text-align: center;
+}
