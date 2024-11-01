@@ -1,6 +1,7 @@
 :root {
   --primary-color: #aa2342ff; 
-  --secondary-color: #d591a1ff;
+  --secondary-color: #BA4B64;
+  --color-hover: #aa2342f0;
   --text-color: rgb(25, 26, 26);
   --text-color-secondary: #ffffff;
   --background-color: #ffffff;
@@ -31,7 +32,6 @@ h2 {
 
 /*** Nav ***/
 nav {
-  /* background-color: var(--secondary-color); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+nav ul li a {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 12px;
@@ -68,18 +68,15 @@ nav ul li {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-nav ul li:hover {
+nav ul li a:hover {
+  background-color: var(--color-hover);
+}
+
+.active {
   background-color: var(--primary-color);
-}
-
-nav ul li a {
-  color: var(--text-color-secondary);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
 }
 
 /*** content ***/
@@ -118,9 +115,7 @@ header::before {
     #be5c7393 60%,    /* Color medio en el segundo tercio */
     #a72242cc 90%     /* Color oscuro en el borde final */
   );
-  /* background: radial-gradient(circle, #ffffff00, #f7ecef11, #be5c7393, #a72242cc); */
-  /* background: radial-gradient(circle, #a72242cc, #be5c7393, #f7ecef11, #ffffff00); */
-  z-index: 1; /* Asegura que esté detrás del contenido */
+  z-index: 1;
 }
 
 header h2 {
