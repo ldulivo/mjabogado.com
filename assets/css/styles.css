@@ -11,14 +11,14 @@
 
 @font-face {
   font-family: 'Jost';
-  src: url('assets/fonts/Jost-VariableFont_wght.ttf');
+  src: url('../fonts/Jost-VariableFont_wght.ttf');
   font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Jost';
-  src: url('assets/fonts/Jost-Italic-VariableFont_wght.ttf');
+  src: url('../fonts/Jost-Italic-VariableFont_wght.ttf');
   font-weight: 100 900;
   font-style: italic;
 }
