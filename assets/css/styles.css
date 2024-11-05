@@ -9,6 +9,20 @@
   --color-border: #aa2342;
 }
 
+@font-face {
+  font-family: 'Jost';
+  src: url('assets/fonts/Jost-VariableFont_wght.ttf');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('assets/fonts/Jost-Italic-VariableFont_wght.ttf');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,16 +33,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  padding: 160px 0 0 0;
 }
 
 /*** Global ***/
 h1 {
   font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 span {
+  display: block;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
   color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h3 span {
+  display: block;
 }
 
 /*** Nav ***/
@@ -39,7 +71,15 @@ nav {
   height: 160px;
   width: 100%;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  background-color: var(--background-color);
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+}
+
+nav .logo img {
+  transition: all 0.3s ease-in-out;  
 }
 
 nav input[type="checkbox"] {
@@ -65,20 +105,23 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 nav ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 23px;
+  border-radius: 31px;
   background-color: var(--secondary-color);
   color: var(--text-color-secondary);
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  height: 56px;
 }
 
 nav ul li a:hover {
@@ -87,6 +130,34 @@ nav ul li a:hover {
 
 .active {
   background-color: var(--primary-color);
+}
+
+nav.scrolled {
+  height: 80px;
+  background-color: transparent;
+}
+
+/* 
+  crear un before del nav.scrolled identico al nav sin contenido pero con un
+  background #ffffffcc y un backfilter blur(10px) para que se vea mas transparente
+*/
+nav.scrolled::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(7px);
+}
+
+nav.scrolled label {
+  transform: scale(0.8);
+}
+
+nav.scrolled .logo img {
+  transform: scale(0.8);
 }
 
 /*** content ***/
@@ -129,10 +200,11 @@ header::before {
 
 header h2 {
   color: var(--text-color);
+  font-size: 1.7rem;
 }
 
 header .content {
-  padding: 0 0 80px 0;
+  padding: 0 0 60px 0;
   z-index: 2;
 }
 
@@ -192,18 +264,6 @@ main .content section:first-of-type .text p:not(:last-of-type)::after {
   margin: 25px auto;
 }
 
-main .content section:first-of-type p:first-of-type {
-  font-size: 1.25rem;
-  margin-top: 0;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
-
-main .content section:first-of-type .text p:first-of-type::after {
-  content: none;
-  display: none;
-}
-
 /*** Featured services ***/
 main .content section .services-list {
   display: flex;
@@ -214,13 +274,13 @@ main .content section .services-list {
 
 main .content section .services-list .service {
   border: 1px solid var(--color-border);
-  border-radius: 19px;
+  border-radius: 75px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 110px;
-  width: 230px;
+  height: 147px;
+  width: 306px;
   padding: 44px;
   text-align: center;
 }
@@ -251,8 +311,9 @@ main .content section .services-list .service {
 
 /* 1024px and Navbar */
 @media screen and (max-width: 1024px) {
-  nav {
-    z-index: 9;
+  nav.scrolled ul {
+    top: 80px;
+    height: calc(100vh - 80px);
   }
 
   #menu-toggle:checked ~ ul {
@@ -329,7 +390,6 @@ main .content section .services-list .service {
     width: 100%;
     border-radius: 0;
     background: var(--primary-color);
-    box-shadow: none;
     height: 60px;
     font-size: larger;
     display: flex;
@@ -384,7 +444,6 @@ main .content section .services-list .service {
 
   main .content section .services-list .service {
     width: 100%;
-    height: auto;
     padding: 20px;
   }
 }
