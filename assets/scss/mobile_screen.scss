@@ -7,11 +7,12 @@
 @media screen and (max-width: 767px) {
   :root {
     --nav-content-width: 100%;
+    --nav-content-height: 60px;
     --main-content-width: calc(100% - 40px);
 
-    --header-logo-width: 100px;
+    --header-logo-width: 75px;
 
-    --button-height: 41px;
+    --button-height: 35px;
     --button-radius: 20px;
     --button-padding: 0px 15px;
     --button-font-size: 14px;

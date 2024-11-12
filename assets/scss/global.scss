@@ -11,14 +11,16 @@
   --footer-background-color: #c9c9c9;
 
   --nav-content-width: 1190px;
+  --nav-content-height: 100px;
+  --nav-scroll-height: calc(var(--nav-content-height) - 20px);
   --main-content-width: 1050px;
 
-  --header-logo-width: 190.7px;
+  --header-logo-width: 120px;
 
-  --button-height: 56px;
+  --button-height: 40px;
   --button-radius: 31px;
   --button-padding: 0px 23px;
-  --button-font-size: 22px;
+  --button-font-size: 16px;
 
   --circular-card-width: 306px;
   --circular-card-height: 147px;
@@ -52,7 +54,7 @@ body {
   color: var(--primary-text-color);
   font-family: 'Jost', sans-serif;
   font-weight: 400;
-  padding: 160px 0 0 0;
+  padding: var(--nav-content-height) 0 0 0;
 }
 
 h1 {

@@ -30,12 +30,16 @@ main.about-me {
         margin: 50px 0 0 0;
       }
 
-      div {
+      .texto {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 1520px;
       }
 
       p {
-        margin: 0 0 30px 0;
+        // margin: 0 0 30px 0;
         hyphens: auto;
         word-wrap: break-word;
         font-size: 23px;
@@ -47,7 +51,42 @@ main.about-me {
 
       img {
         width: 100%;
-        margin: 0 0 30px 0;
+        // margin: 0 0 30px 0;
+      }
+
+      .video {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .reviews-section {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+
+        .reviews-list {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+
+          .review {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 400px;
+
+            p {
+              hyphens: auto;
+              word-wrap: break-word;
+              font-size: 23px;
+
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
       }
     }
   }
