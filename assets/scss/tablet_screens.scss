@@ -1,0 +1,63 @@
+/*
+  Medium screens
+  
+  Max width: 991px
+  Min width: 768px
+*/
+@media screen and (max-width: 991px) {
+  :root {
+    --nav-content-width: 720px;
+    --main-content-width: 720px;
+
+    --header-logo-width: 140px;
+
+    --button-height: 46px;
+    --button-radius: 23px;
+    --button-padding: 0px 17px;
+    --button-font-size: 16px;
+
+    --circular-card-width: 220px;
+    --circular-card-height: 105px;
+    --circular-card-radius: 55px;
+
+    --footer-info-p: 19px;
+  }
+
+  h1 {
+    font-size: 41px;
+  }
+  
+  h2 {
+    font-size: 39px;
+  }
+
+  p {
+    font-size: 19px;
+  }
+
+  main {
+    .content {
+      section {
+        .featured-our-values {
+          .image {
+            height: unset;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer--info {
+      p {
+        img {
+          width: 22px;
+        }
+      }
+
+      p:nth-child(2) img {
+        width: 25px;
+      }
+    }
+  }
+}

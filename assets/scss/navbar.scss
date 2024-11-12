@@ -1,0 +1,74 @@
+@use 'mixins';
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: var(--main-background-color);
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+
+  .logo img {
+    transition: all 0.3s ease-in-out;
+    width: var(--header-logo-width);
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  label {
+    display: none;
+  }
+  
+  ul {
+    @include mixins.nav-ul-styles;
+  
+    li a {
+     background-color: var(--accent-color);
+     color: var(--secondary-text-color);
+     @include mixins.button-styles;
+   }
+   
+    li a:hover {
+     background-color: var(--hover-color);
+   }
+  }
+  
+  .nav-content {
+    @include mixins.nav-content-styles;
+  }
+  
+}
+
+.scrolled {
+  height: 80px;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(7px);
+  }
+
+  label {
+    transform: scale(0.8);
+  }
+
+  .logo img {
+    transform: scale(0.8);
+  }
+}
+
+.active {
+  background-color: var(--main-brand-color);
+}
