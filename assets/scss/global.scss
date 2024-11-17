@@ -55,6 +55,18 @@ body {
   font-family: 'Jost', sans-serif;
   font-weight: 400;
   padding: var(--nav-content-height) 0 0 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    max-width: var(--nav-content-width);
+    height: 1px;
+    background-color: var(--main-brand-color);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 h1 {
@@ -85,10 +97,10 @@ h3 {
 
 p {
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 400;
   text-align: justify;
   span {
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
