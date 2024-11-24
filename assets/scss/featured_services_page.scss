@@ -32,15 +32,17 @@ main.featured-services-page {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 40px;
 
     .image {
-      width: 509px;
-      min-width: 509px;
+      // width: 509px;
+      // min-width: 509px;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      flex: 1;
   
       h2 {
         position: absolute;
@@ -54,6 +56,7 @@ main.featured-services-page {
         top: 40%;
       }
   
+      source,
       img {
         width: 107%;
       }
@@ -61,8 +64,9 @@ main.featured-services-page {
     }
   
     .text {
-      width: 100%;
-      max-width: 525px;
+      // width: 100%;
+      // max-width: 525px;
+      flex: 1;
 
       p {
         hyphens:auto;

@@ -57,10 +57,14 @@ footer {
       align-items: center;
       height: 52px;
 
+      source,
       img {
         width: 25px;
         margin: 0 10px 0 0;
 
+      }
+      &:nth-child(2) source {
+        width: 27px;
       }
       &:nth-child(2) img {
         width: 27px;

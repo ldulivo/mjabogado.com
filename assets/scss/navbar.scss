@@ -12,6 +12,11 @@ nav {
   transition: all 0.3s ease-in-out;
   z-index: 9;
 
+  .logo source {
+    transition: all 0.3s ease-in-out;
+    width: var(--header-logo-width);
+  }
+
   .logo img {
     transition: all 0.3s ease-in-out;
     width: var(--header-logo-width);
@@ -61,6 +66,10 @@ nav {
   }
 
   label {
+    transform: scale(0.8);
+  }
+
+  .logo source {
     transform: scale(0.8);
   }
 

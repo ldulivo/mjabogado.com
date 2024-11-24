@@ -35,4 +35,8 @@ header {
     padding: 0 0 20px 0;
     z-index: 2;
   }
+
+  @supports (background-image: url("data:image/webp;base64,UklGRh4AAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmkA0HQAA3AA/vuUAAA=")) {
+    background-image: url("../img/firma.webp");
+  }
 }

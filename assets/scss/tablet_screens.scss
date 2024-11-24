@@ -51,9 +51,14 @@
   footer {
     .footer--info {
       p {
+        source,
         img {
           width: 22px;
         }
+      }
+
+      p:nth-child(2) source {
+        width: 25px;
       }
 
       p:nth-child(2) img {

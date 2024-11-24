@@ -13,16 +13,20 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: stretch;
 
         .image {
           width: 511px;
-          height: 540px;
           overflow: hidden;
           display: flex;
           align-items: flex-end;
 
-          img {
-            width: 100%;
+          background-image: url("../img/balanza_2.jpg");
+          background-size: cover;
+          background-position: center;
+
+          @supports (background-image: url("data:image/webp;base64,UklGRh4AAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmkA0HQAA3AA/vuUAAA=")) {
+            background-image: url("../img/balanza_2.webp");
           }
         }
 

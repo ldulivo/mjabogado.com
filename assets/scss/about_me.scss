@@ -49,9 +49,24 @@ main.about-me {
         }
       }
 
-      img {
+      // source,
+      // img {
+      //   width: 100%;
+      //   // margin: 0 0 30px 0;
+      // }
+
+      .compromiso .image {
         width: 100%;
-        // margin: 0 0 30px 0;
+        height: 100%;
+        min-height: 580px;
+        background-image: url("../img/Imagen_sobre_mi.jpg");
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+
+        @supports (background-image: url("data:image/webp;base64,UklGRh4AAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmkA0HQAA3AA/vuUAAA=")) {
+          background-image: url("../img/Imagen_sobre_mi.webp");
+        }
       }
 
       .video {
