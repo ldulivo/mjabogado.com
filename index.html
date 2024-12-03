@@ -148,19 +148,21 @@
     </div>
     <div class="whatsapp" id="whatsapp">
       <div class="whatsapp--content">
-        <a class="whatsapp--button" id="whatsappButton" data-number = "+34613812065" href="javascript:void(0);">
+        <a class="whatsapp--button" id="whatsappButton" data-number = "+34613812065" data-email = "mauricio.jimenez@icamur.org" href="javascript:void(0);">
           <img src="assets/img/whatsapp.svg" lazyload="lazy" alt="Whatsapp">
         </a>
       </div>
       <dialog id="whatsappDialog">
         <h2>¡Hola! ¿Cómo te puedo ayudar?</h2>
         <p>¡Nos encantaría conocerte mejor y ayudarte a encontrar la solución a tu problema!</p>
-        <p>Puedes contactarnos a través de WhatsApp <span id="whatsappNumber"></span> o escribirnos un correo electrónico.</p>
+        <p>Puedes contactarnos a través de WhatsApp <span id="whatsappNumber"></span> o escribirnos un correo electrónico a <span id="whatsappEmail"></span>.</p>
         <input type="text" name="whatsappName" id="whatsappName" placeholder="Nombre">
         <input type="text" name="whatsappPhone" id="whatsappPhone" placeholder="Teléfono">
         <textarea name="whatsappMessage" id="whatsappMessage" placeholder="Mensaje"></textarea>
-        <button type="button" id="whatsappButtonSend">Enviar</button>
-        <button type="button" id="whatsappButtonClose">Cerrar</button>
+        <div class="whatsapp--buttons">
+          <button type="button" id="whatsappButtonSend">Enviar</button>
+          <button type="button" id="whatsappButtonClose">Cerrar</button>
+        </div>
         <button type="button" id="whatsappButtonClose" class="whatsapp-button-x">X</button>
       </dialog>
     </div>
