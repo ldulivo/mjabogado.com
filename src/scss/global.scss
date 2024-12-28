@@ -1,0 +1,319 @@
+:root {
+  --color-primary: #a92342;
+  --color-secondary: #c9c9c9;
+  --color-background: #ffffff;
+  --color-dark: #191a1a;
+  --color-dark-light: #808080ff;
+  --accent-color: #bd546c;
+  --hover-color: #aa2342e5;
+  --border-color: #aa2342;
+
+  --nav-color: #ffffffb0;
+  
+  --servicios-destacados-width: 306px;
+  --servicios-destacados-height: 147px;
+  --servicios-destacados-border: var(--color-primary) 1px solid;
+  --servicios-destacados-borderRadius: calc(var(--servicios-destacados-height) / 2);
+
+  // --primer-consulta-gratis-width: 306px;
+  --primer-consulta-gratis-height: 110px;
+  --primer-consulta-gratis-borderRadius: calc(var(--primer-consulta-gratis-height) / 2);
+
+  --review-button-color: #a9234254;
+
+  --whatsapp-background-color: #25d366;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-VariableFont_wght.ttf');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Italic-VariableFont_wght.ttf');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  color: var(--primary-text-color);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  padding: 100px 0 0 0;
+  min-height: 100vh;
+
+  @media screen and (max-width: 760px) {
+    padding: 80px 0 0 0;
+  }
+}
+
+header, main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  .global-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    text-transform: uppercase;
+    margin: 20px 0;
+
+    .content {
+      align-items: flex-start;
+
+      h1 {
+        color: var(--color-dark);
+      }
+    }
+  }
+}
+
+section {
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+
+  @media screen and (max-width: 580px) {
+    font-size: 2.2rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.8rem;
+  }
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 20px 0;
+  @media screen and (max-width: 500px) {
+    font-size: 1.8rem;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  span {
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 580px) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.1rem;
+  }
+}
+
+// dialog-button
+.dialog-button {
+  all: unset;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--servicios-destacados-width);
+  height: var(--servicios-destacados-height);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 580px) {
+    font-size: 0.9rem;
+  }
+}
+
+// videoApi
+.videoApi,
+.VideoApiDialog {
+  all: unset;
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  > img,
+  > iframe {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+  }
+
+  > img {
+    height: auto;
+  }
+
+  .play-button {
+    position: absolute;
+    width: 72px;
+    height: 42px;
+    color: var(--color-dark);
+    background: var(--color-primary);
+    border: none;
+    border-radius: 25px;
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 4px 8px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 760px) {
+    min-height: unset;
+  }
+}
+
+.VideoApiDialogContent {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .VideoApiDialog {
+    min-height: 260px;
+  }
+
+  .VideoApiDialogContent-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+    .title,
+    .autor,
+    .publishedAt {
+      all: unset;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--color-dark);
+      line-height: 2rem;
+    }
+
+    .autor,
+    .publishedAt {
+      font-weight: 400;
+      color: var(--color-dark-light);
+      line-height: 1.8rem;
+    }
+
+    .publishedAt {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+// svg
+svg {
+  max-width: 64px;
+  max-height: 64px;
+}
+
+// spinner
+/* HTML: <div class="loader"></div> */
+.loader-content {
+  top: 0;
+  left: 0;
+  all: unset;
+  position: absolute;
+  width: 100%;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid var(--hover-color);
+  animation:
+    l20-1 0.8s infinite linear alternate,
+    l20-2 1.6s infinite linear;
+  
+  @keyframes l20-1{
+      0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+      12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+      25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+      50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+      62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+      75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+      100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+  }
+  @keyframes l20-2{ 
+    0%    {transform:scaleY(1)  rotate(0deg)}
+    49.99%{transform:scaleY(1)  rotate(135deg)}
+    50%   {transform:scaleY(-1) rotate(0deg)}
+    100%  {transform:scaleY(-1) rotate(-135deg)}
+  }
+}

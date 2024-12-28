@@ -1,0 +1,17 @@
+{
+  "name": "mjabogado.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-sass": "sass --watch src/scss/styles.scss:assets/css/styles.css",
+    "build-sass": "sass src/scss/styles.scss:assets/css/styles.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.83.0"
+  }
+}

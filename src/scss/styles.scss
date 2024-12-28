@@ -1,0 +1,17 @@
+/* settings */
+@use "global";
+@use "content";
+
+/* pages*/
+@use "home";
+@use "sobremi";
+@use "featured_services";
+@use "online";
+@use "videos";
+
+/* components */
+@use "navbar";
+@use "footer";
+@use "pageNotFound";
+@use "dialog";
+@use "whatsapp";

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg1601"
+   sodipodi:docname="tiktok-svgrepo-com.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1605" />
+  <sodipodi:namedview
+     id="namedview1603"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.76986251"
+     inkscape:cx="320.83651"
+     inkscape:cy="471.51277"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1601" />
+  <g
+     id="SVGRepo_bgCarrier"
+     stroke-width="0" />
+  <g
+     id="SVGRepo_tracerCarrier"
+     stroke-linecap="round"
+     stroke-linejoin="round" />
+  <g
+     id="SVGRepo_iconCarrier">
+    <path
+       d="M10 12C8.34315 12 7 13.3431 7 15C7 16.6569 8.34315 18 10 18C11.6569 18 13 16.6569 13 15V6C13.3333 7 14.6 9 17 9"
+       stroke="#aa2342"
+       stroke-width="1.5"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path1598" />
+  </g>
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 20.235951,0.72936715 c 1.6569,0 3,1.34314995 3,2.99999995 V 19.729368 c 0,1.6569 -1.3431,2.999999 -3,2.999999 H 4.2359511 c -1.65685,0 -3,-1.343099 -3,-2.999999 V 3.7293671 c 0,-1.65685 1.34315,-2.99999995 3,-2.99999995 z m 0,1.99999995 c 0.5523,0 1,0.44772 1,1 V 19.729368 c 0,0.5523 -0.4477,1 -1,1 H 4.2359511 c -0.55228,0 -1,-0.4477 -1,-1 V 3.7293671 c 0,-0.55228 0.44772,-1 1,-1 z"
+     fill="#aa2342"
+     id="path10" />
+</svg>
