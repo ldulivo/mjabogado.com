@@ -44,8 +44,20 @@ const renderLoading = () => {
       <div class="loader"></div>
     </div>
     `
-  )
-}
+  );
+};
+
+const renderError = (functionName) => {
+  return (
+    `
+    <div class="error-content">
+      <p>Error al cargar los videos.</p>
+      <p>Intente nuevamente.</p>
+      <button class="btn-retry" onclick="${functionName}()">Reintentar</button> <button
+    </div>
+    `
+  );
+};
 
 const renderVideos = (videoTitle, videoPublishedAt, videoThumbnailDefault) => {
   return (
@@ -96,6 +108,8 @@ const getVideoInfo = async (video, order = "details") => {
       }
     })
     .catch(error => {
+      video.removeEventListener("click", handleVideoClick);
+      video.innerHTML = renderError('headerVideo');
       console.error("Error:", error);
     });
 };
@@ -139,17 +153,23 @@ const getAllVideos = async (order = "recent") => {
       }
     })
     .catch(error => {
+      videosContent.innerHTML = renderError('getAllVideos');
       console.error("Error:", error);
     });
 }
 
-videoApiDialog.forEach((video) => {
-  video.addEventListener("click", (e) => {
-    openVideoApiDialog(video, false);
-  });
+function handleVideoClick(e) {
+  const video = e.target.closest('.VideoApiDialogContent');
+  openVideoApiDialog(video, false);
+}
 
-  getVideoInfo(video);
-})
+const headerVideo = () => {
+  videoApiDialog.forEach((video) => {
+    video.addEventListener("click", handleVideoClick);
+  
+    getVideoInfo(video);
+  })
+}
 
 // buttons filter
 videosBtn.forEach((btn) => {
@@ -166,4 +186,9 @@ videosDialog.addEventListener("click", (e) => {
   videosDialog.style.display = "none";
 })
 
-getAllVideos();
+const init = () => {
+  headerVideo();
+  getAllVideos();
+}
+
+init();

@@ -95,7 +95,8 @@ sendButton.addEventListener("click", (e) => {
   }
 
   // Enviar datos al servidor
-  fetch("services/enviar_correo.php", {
+  // fetch("services/enviar_correo.php", {
+  fetch("services/enviar_correo", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

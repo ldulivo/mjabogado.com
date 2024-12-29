@@ -1,17 +1,17 @@
 /* settings */
-@use "global";
-@use "content";
+@use "layout/global";
+@use "layout/content";
 
 /* pages*/
-@use "home";
-@use "sobremi";
-@use "featured_services";
-@use "online";
-@use "videos";
+@use "pages/home";
+@use "pages/sobremi";
+@use "pages/featured_services";
+@use "pages/online";
+@use "pages/videos";
 
 /* components */
-@use "navbar";
-@use "footer";
-@use "pageNotFound";
-@use "dialog";
-@use "whatsapp";
+@use "components/navbar";
+@use "components/footer";
+@use "components/pageNotFound";
+@use "components/dialog";
+@use "components/whatsapp";

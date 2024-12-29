@@ -8,7 +8,6 @@ const loadWhatsapp = () => {
   if (isMobileDevice()) {
     whatsapp.classList.add("whatsapp-mobile");
     const whatsappNumber = whatsapp.dataset.whatsapp;
-    console.log(whatsappNumber);
     whatsapp.addEventListener("click", () => {
       window.open("https://wa.me/" + whatsappNumber + "?text=Hola Mauricio, me gustaría consultarte ");
     });

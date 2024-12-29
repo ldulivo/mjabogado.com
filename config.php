@@ -23,5 +23,5 @@ $config = [
     "https://www.tiktok.com/@mj.abogado",
     "https://www.youtube.com/@mj.abogado"
   ],
-  "filecontrol" => "v=1.0.16"
+  "filecontrol" => "v=1.0.18"
 ];

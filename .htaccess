@@ -2,6 +2,12 @@ Options +FollowSymlinks
 
 RewriteEngine On
 
+# Restricción de acceso al archivo env.php
+<Files "env.php">
+    Require all denied
+</Files>
+
+# Reglas de reescritura
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|ico|svg)$ [NC]
