@@ -36,12 +36,16 @@ class Footer
             </a>
           </div>
           <div>
-            <img src="/assets/img/ico_email.svg" loading="lazy" alt="Logo de correo electrónico">
-            <p><?php echo Conf::get("email"); ?></p>
+            <a href="mailto:<?php echo Conf::get("email"); ?>">
+              <img src="/assets/img/ico_email.svg" loading="lazy" alt="Logo de correo electrónico">
+              <p><?php echo Conf::get("email"); ?></p>
+            </a>
           </div>
           <div>
-            <img src="/assets/img/ico_phone.svg" loading="lazy" alt="Logo de teléfono de contacto">
-            <p><?php echo Conf::get("telephone"); ?></p>
+            <a href="tel:+<?php echo str_replace(" ", "", Conf::get("telephone")); ?>" >
+              <img src="/assets/img/ico_phone.svg" loading="lazy" alt="Logo de teléfono de contacto">
+              <p><?php echo Conf::get("telephone"); ?></p>
+            </a>
           </div>
         </div>
       </div>
