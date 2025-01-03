@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-sass": "sass --watch src/scss/styles.scss:assets/css/styles.css",
-    "build-sass": "sass src/scss/styles.scss:assets/css/styles.css --style compressed"
+    "build-sass": "sass --no-source-map src/scss/styles.scss:assets/css/styles.css --style compressed"
   },
   "keywords": [],
   "author": "",
