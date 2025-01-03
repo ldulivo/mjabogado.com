@@ -78,13 +78,23 @@ main {
           align-items: center;
           width: var(--servicios-destacados-width);
           height: var(--servicios-destacados-height);
-          cursor: pointer;
-        }
+          border: unset;
+          border-radius: 15px;
+          box-shadow: 3px 3px 15px -5px;
+          position: relative;
 
-        li {
-          border: var(--servicios-destacados-border);
-          border-radius: var(--servicios-destacados-borderRadius);
-          cursor: pointer;
+          button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px 30px;
+            font-size: 0.7rem;
+            color: var(--color-primary);
+          }
         }
 
         @media screen and (max-width: 1200px) {

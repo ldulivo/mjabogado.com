@@ -24,33 +24,39 @@ function pageMain()
         <div class="index-main--servicios-destacados">
          <ul>
            <li>
+              Derecho civil
               <button class="dialog-button" data-dialog="civil">
-                Derecho civil
+                conoce más
               </button>
             </li>
            <li>
+              Derecho penal
               <button class="dialog-button" data-dialog="penal">
-                Derecho penal
+                conoce más
               </button>
             </li>
            <li>
+              Accidentes <span>de tráfico</span>
               <button class="dialog-button" data-dialog="tráfico">
-                Accidentes <span>de tráfico</span>
+                conoce más
               </button>
             </li>
            <li>
+              Derecho <span>de familia</span>
               <button class="dialog-button" data-dialog="familia">
-                Derecho <span>de familia</span>
+                conoce más
               </button>
             </li>
            <li>
+              Derecho <span>laboral</span>
               <button class="dialog-button" data-dialog="laboral">
-                Derecho <span>laboral</span>
+                conoce más
               </button>
             </li>
            <li>
+              Derecho <span>inmobiliario</span>
               <button class="dialog-button" data-dialog="inmobiliario">
-                Derecho <span>inmobiliario</span>
+                conoce más
               </button>
             </li>
          </ul> 
