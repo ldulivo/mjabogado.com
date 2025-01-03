@@ -29,7 +29,7 @@ successMessage.addEventListener("click", () => {
 
 const closeDialog = () => {
   dialogContent.innerHTML = "";
-  dialog.style.display = "none";
+  dialog.classList.remove("dialog-active");
   dialogBackdrop.style.display = "none";
   successMessage.style.display = "none";
   sendButton.disabled = false;
@@ -38,7 +38,7 @@ const closeDialog = () => {
 
 // open dialog
 const openDialog = (content) => {
-  dialog.style.display = "flex";
+  dialog.classList.add("dialog-active");
   dialogBackdrop.style.display = "flex";
   dialogContent.style.display = "none";
   if (servicios[content] !== undefined) {
