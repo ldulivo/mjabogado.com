@@ -87,13 +87,29 @@ main {
             position: absolute;
             right: 0;
             bottom: 0;
-            width: 100%;
+            width: fit-content;
             height: fit-content;
             display: flex;
             align-items: flex-end;
-            padding: 10px 30px;
-            font-size: 0.7rem;
+            margin: 10px 15px;
+            padding: 5px 10px;
+            font-size: .7rem;
             color: var(--color-primary);
+            border: var(--color-primary) 1px solid;
+            box-shadow: 2px 2px 6px 0px var(--color-dark-light);
+            border-radius: 15px;
+
+            &:hover {
+              color: var(--hover-color);
+              border: var(--hover-color) 1px solid;
+              box-shadow: 2px 2px 6px 0px var(--color-primary);
+            }
+
+            &:active {
+              color: var(--active-color);
+              border: var(--active-color) 1px solid;
+              box-shadow: 2px 2px 6px 0px var(--color-primary);
+            }
           }
         }
 
