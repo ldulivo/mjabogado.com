@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /services/
+Disallow: /serviciosdestacados/
+Disallow: /env.php
+Disallow: /config.php
+
+Allow: /
+
+Sitemap: https://www.mjabogado.com/sitemap.xml
