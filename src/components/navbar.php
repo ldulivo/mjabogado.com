@@ -25,8 +25,7 @@ class Navbar
         </label>
 
         <ul>
-          <li><a class=<?php echo $ruta == "sobremi" ? "'active'" : "''" ?> aria-current="<?php echo $ruta == 'sobremi' ? 'page' : 'false'; ?>" href="<?php echo $baseUrl ?>/sobremi" aria-current="page">Sobre mí</a></li>   
-          <li><a class=<?php echo $ruta == "serviciosdestacados" ? "'active'" : "''" ?> aria-current="<?php echo $ruta == '/serviciosdestacados' ? 'page' : 'false'; ?>" href="<?php echo $baseUrl ?>/serviciosdestacados">Servicios destacados</a></li>
+          <li><a class=<?php echo $ruta == "sobremi" ? "'active'" : "''" ?> aria-current="<?php echo $ruta == 'sobremi' ? 'page' : 'false'; ?>" href="<?php echo $baseUrl ?>/sobremi" aria-current="page">Sobre mí</a></li>
           <li><a class=<?php echo $ruta == "online" ? "'active'" : "''" ?> aria-current="<?php echo $ruta == 'online' ? 'page' : 'false'; ?>" href="<?php echo $baseUrl ?>/online">Online</a></li>
           <li><a class=<?php echo $ruta == "videos" ? "'active'" : "''" ?> aria-current="<?php echo $ruta == 'videos' ? 'page' : 'false'; ?>" href="<?php echo $baseUrl ?>/videos">Videos</a></li>
         </ul>
