@@ -73,6 +73,11 @@ footer {
 
       a {
         color: var(--color-dark);
+
+        > img {
+          width: auto;
+          height: 100%;
+        }
       }
 
       p {

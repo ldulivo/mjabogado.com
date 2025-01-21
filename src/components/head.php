@@ -15,7 +15,7 @@ class Head
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Jiménez Abogado - <?php echo $title; ?></title>
+    <title>Mauricio Jiménez - <?php echo $title; ?></title>
   
     <!-- Meta Description for SEO -->
     <meta name="description"

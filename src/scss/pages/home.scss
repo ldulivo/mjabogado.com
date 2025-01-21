@@ -11,6 +11,10 @@ header {
     position: relative;
     text-transform: uppercase;
 
+    @supports (background-image: url("data:image/webp;base64,UklGRh4AAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmkA0HQAA3AA/vuUAAA=")) {
+      background-image: url("../img/firma.webp");
+    }
+
     &::before {
       content: "";
       position: absolute;

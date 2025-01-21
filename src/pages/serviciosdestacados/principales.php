@@ -7,7 +7,7 @@ function pageHeader()
   ?>
   <div class="global-header">
     <div class="content">
-      <h1>Servicios Destacados</h1>
+      <h1>Principales Servicios</h1>
     </div>
   </div>
   <?php

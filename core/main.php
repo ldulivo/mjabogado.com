@@ -23,6 +23,9 @@ if (!file_exists("src/pages/" . $archivo . ".php")) {
   $archivo = "404";
 }
 
+echo "<!DOCTYPE html>";
+echo "<html lang=\"es-ES\">";
 layout($archivo);
+echo "</html>";
 
 exit;

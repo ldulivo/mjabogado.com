@@ -16,6 +16,8 @@ class Route
   {
 
     $ruta = self::getUrl();
+    $ruta = explode("?", $ruta);
+    $ruta = $ruta[0];
     $ruta = trim($ruta, "/");
     $ruta = explode(".", $ruta);
     return isset($ruta[0]) && $ruta[0] != "" ? $ruta[0] : "index";
