@@ -1,6 +1,11 @@
 <?php
 
-$title = "Sobre mí";
+$title = "Sobre mí - Mauricio Jiménez";
+$metaDescription = "Conoce a Mauricio Jiménez, abogado en Murcia especializado en Derecho Civil, Penal y Laboral. Atención personalizada, resultados comprobados y experiencia colaborando con profesionales de más de 20 años. ¡Tu tranquilidad legal comienza con la primera consulta gratuita!";
+$ogTitle = "Sobre mí - Mauricio Jiménez | Abogado en Murcia";
+$ogDescription = "Soy Mauricio Jiménez, abogado especializado en temas civiles, penales y laborales. Compromiso, experiencia y atención personalizada para resolver tus problemas legales.";
+$ogImage = "https://www.mjabogado.com/assets/img/Imagen_sobre_mi.jpeg";
+$ogUrl = "https://www.mjabogado.com/sobremi";
 
 use core\Conf;
 

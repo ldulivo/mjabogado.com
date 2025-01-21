@@ -1,6 +1,11 @@
 <?php
 
 $title = "";
+$metaDescription = "";
+$ogTitle = "";
+$ogDescription = "";
+$ogImage = "";
+$ogUrl = "";
 
 function pageHeader()
 {

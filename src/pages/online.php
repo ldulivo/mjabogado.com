@@ -1,6 +1,11 @@
 <?php
 
-$title = "Servicios online";
+$title = "Servicios online - Mauricio Jiménez";
+$metaDescription = "Accede a asesoramiento legal online con Mauricio Jiménez, abogado en Murcia. Resuelve tu caso desde casa con seguridad, agilidad y respaldo profesional. Control total, transparencia y respuestas rápidas para proteger tus derechos en todo momento.";
+$ogTitle = "Asesoramiento Legal Online - Mauricio Jiménez Abogado";
+$ogDescription = "Resuelve tu caso sin moverte de casa. Obtén asesoramiento legal online con seguridad, agilidad y transparencia. Calidad profesional desde cualquier lugar.";
+$ogImage = "";
+$ogUrl = "https://www.mjabogado.com/online";
 
 use core\Conf;
 

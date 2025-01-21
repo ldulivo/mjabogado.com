@@ -13,7 +13,7 @@ function layout($ruta)
 {
   include "src/pages/" . $ruta . ".php";
 
-  Head::head($title);
+  Head::head($title, $metaDescription, $ogTitle, $ogDescription, $ogImage, $ogUrl);
   echo "<body>";
 
   Navbar::navbar($ruta);

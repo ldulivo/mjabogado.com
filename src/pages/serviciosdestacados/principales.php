@@ -1,6 +1,11 @@
 <?php
 
-$title = "Servicios destacados";
+$title = "Servicios destacados - Mauricio Jiménez";
+$metaDescription = "Explora en detalle los servicios principales de Mauricio Jiménez: Derecho Civil, Penal, de Familia, Laboral, Inmobiliario y Accidentes de Tráfico. Descubre cómo podemos ayudarte con soluciones legales personalizadas.";
+$ogTitle = "Servicios Jurídicos - Mauricio Jiménez Abogado";
+$ogDescription = "Descubre los servicios destacados de Mauricio Jiménez: derecho penal, civil, laboral, familiar, accidentes de tráfico e inmobiliario. ¡Consulta gratuita!";
+$ogImage = "";
+$ogUrl = "";
 
 function pageHeader()
 {

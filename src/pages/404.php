@@ -6,6 +6,11 @@
  */
 
 $title = "Página no encontrada";
+$metaDescription = "La página que buscas no está disponible. Visita Mauricio Jiménez Abogado, abogado en Murcia, especializado en derecho penal y familiar. Encuentra la información legal que necesitas.";
+$ogTitle = "Página no encontrada - Mauricio Jiménez Abogado";
+$ogDescription = "Lo sentimos, la página que buscas no existe. Explora nuestro sitio para obtener asesoramiento legal de calidad.";
+$ogImage = "";
+$ogUrl = "";
 
  function pageHeader()
  {

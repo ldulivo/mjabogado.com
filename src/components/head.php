@@ -5,21 +5,33 @@ use core\Conf;
 
 class Head
 {
-  public static function head($title = "")
+  public static function head(
+    $title = "",
+    $metaDescription = "",
+    $ogTitle = "",
+    $ogDescription = "",
+    $ogImage = "",
+    $ogUrl = ""
+  )
   {
     // si viene un titulo, es decir que $title no es vacío, entonces se usa el título
     // en caso contrario, se usa el título por defecto que está en la configuración
     $title = $title != "" ? $title : Conf::get("title");
+    $metaDescription = $metaDescription != "" ? $metaDescription : Conf::get("description");
+    $ogTitle = $ogTitle != "" ? $ogTitle : Conf::get("ogTitle");
+    $ogDescription = $ogDescription != "" ? $ogDescription : Conf::get("ogDescription");
+    $ogImage = $ogImage != "" ? $ogImage : Conf::get("ogImage");
+    $ogUrl = $ogUrl != "" ? $ogUrl : Conf::get("ogUrl");
     
     ?>
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Jiménez - <?php echo $title; ?></title>
+    <title><?php echo $title; ?></title>
   
     <!-- Meta Description for SEO -->
     <meta name="description"
-      content="<?php echo Conf::get("description"); ?>">
+      content="<?php echo $metaDescription; ?>">
   
     <!-- Meta Keywords (optional) -->
     <meta name="keywords"
@@ -29,21 +41,21 @@ class Head
     <meta name="author" content="<?php echo Conf::get("author"); ?>">
   
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Mauricio Jiménez - Abogado en Murcia">
+    <meta property="og:title" content="<?php echo $ogTitle; ?>"> 
     <meta property="og:description"
-      content="Mauricio Jiménez, abogado con experiencia en derecho familiar y penal en Murcia. Contacta para una consulta personalizada.">
-    <meta property="og:image" content="https://www.mjabogado.com/assets/img/Imagen_sobre_mi.jpeg">
-    <meta property="og:url" content="https://www.mjabogado.com">
+      content="<?php echo $ogDescription; ?>">
+    <meta property="og:image" content="<?php echo $ogImage; ?>">
+    <meta property="og:url" content="<?php echo $ogUrl; ?>">
     <meta property="og:type" content="website">
   
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mauricio Jiménez - Abogado en Murcia">
-    <meta name="twitter:description" content="Asesoría legal en Murcia con especialización en derecho familiar y penal.">
-    <meta name="twitter:image" content="https://www.mjabogado.com/assets/img/Imagen_sobre_mi.jpeg">
+    <meta name="twitter:title" content="<?php echo $ogTitle; ?>">
+    <meta name="twitter:description" content="<?php echo $ogDescription; ?>">
+    <meta name="twitter:image" content="<?php echo $ogImage; ?>">
   
     <!-- Canonical URL -->
-    <link rel="canonical" href="<?php echo Conf::get("url"); ?>">
+    <link rel="canonical" href="<?php echo $ogUrl; ?>">
   
     <!-- Favicon -->
     <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
