@@ -29,7 +29,11 @@ const getReviews = () => {
       return response.json();
     })
     .then(data => {
-      if (data?.result?.reviews) { 
+      if (data?.result?.reviews) {
+        // review totales
+        allReviews(data.result.rating, data.result.user_ratings_total);
+        
+        // review por usuario
         const reviewsHTML = document.getElementById('about_me_review');
         const reviews = data.result.reviews;
         reviews.map((review, index) => {
@@ -100,6 +104,41 @@ const getReviews = () => {
     });
 };
 
+// all reviews
+const allReviews = (rating, users) => {
+  const userRatingsTotalContent = document.getElementById('user_ratings_total_content');
+
+  // crear h3 con el total de reviews
+  const userRatingsTotal = document.createElement('h3');
+  userRatingsTotal.dataset.rating = users;
+  userRatingsTotal.innerHTML = users;
+  userRatingsTotalContent.appendChild(userRatingsTotal);
+
+  // agregar img de google
+  const googleImg = document.createElement('img');
+  googleImg.src = "assets/img/google-svgrepo-com.svg";
+  googleImg.alt = "logo de google";
+  googleImg.srcset = "assets/img/google-svgrepo-com.svg";
+  userRatingsTotal.appendChild(googleImg);
+
+  // crear div con el rating
+  const startRatingsTotal = document.createElement('div');
+  startRatingsTotal.classList.add('slide-rating');
+  startRatingsTotal.dataset.rating = rating;
+  
+  for (let i = 0; i < 5; i++) {
+    const star = document.createElement('span');
+    star.classList.add('slide-rating-stars');
+    if (i < Math.floor(rating)) {
+      star.classList.add('slide-rating-stars-filled');
+    } else if (i < rating) {
+      star.classList.add('slide-rating-stars-half');
+    }
+    startRatingsTotal.appendChild(star);
+  }
+  userRatingsTotalContent.appendChild(startRatingsTotal);
+}
+
 // animar las diapositivas
 const reviewAnimateSlides = () => {
   clearTimeout(restartSlidesReviews);
@@ -164,8 +203,8 @@ const reviewChangeSlide = (num) => {
   }
 }
 
-
-document.body.style.backgroundColor = "#fdf7e8ff";
+if (window.location.pathname == '/sobremi')
+  document.body.style.backgroundColor = "#fdf7e8ff";
 getReviews();
 btn_left.addEventListener("click", () => reviewChangeSlide(-1));
 btn_right.addEventListener("click", () => reviewChangeSlide(1));

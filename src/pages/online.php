@@ -5,7 +5,7 @@ $metaDescription = "Accede a asesoramiento legal online con Mauricio Jiménez, a
 $ogTitle = "Asesoramiento Legal Online - Mauricio Jiménez Abogado";
 $ogDescription = "Resuelve tu caso sin moverte de casa. Obtén asesoramiento legal online con seguridad, agilidad y transparencia. Calidad profesional desde cualquier lugar.";
 $ogImage = "";
-$ogUrl = "https://www.mjabogado.com/online";
+$ogUrl = "https://mjabogado.com/online";
 
 use core\Conf;
 

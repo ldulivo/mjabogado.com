@@ -22,7 +22,7 @@ if ($url[0] === "services") {
  * Se evita que el motor de búsqueda indexa el sitio web
  * mientras se está desarrollando
  */
-if ($env["isDevelopment"] || $url[0] === "serviciosdestacados") {
+if ($env["isDevelopment"]) {
     header('X-Robots-Tag: noindex');
 } else {
   header("X-Robots-Tag: index");

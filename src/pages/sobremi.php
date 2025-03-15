@@ -4,8 +4,8 @@ $title = "Sobre mí - Mauricio Jiménez";
 $metaDescription = "Conoce a Mauricio Jiménez, abogado en Murcia especializado en Derecho Civil, Penal y Laboral. Atención personalizada, resultados comprobados y experiencia colaborando con profesionales de más de 20 años. ¡Tu tranquilidad legal comienza con la primera consulta gratuita!";
 $ogTitle = "Sobre mí - Mauricio Jiménez | Abogado en Murcia";
 $ogDescription = "Soy Mauricio Jiménez, abogado especializado en temas civiles, penales y laborales. Compromiso, experiencia y atención personalizada para resolver tus problemas legales.";
-$ogImage = "https://www.mjabogado.com/assets/img/Imagen_sobre_mi.jpeg";
-$ogUrl = "https://www.mjabogado.com/sobremi";
+$ogImage = "https://mjabogado.com/assets/img/Imagen_sobre_mi.jpeg";
+$ogUrl = "https://mjabogado.com/sobremi";
 
 use core\Conf;
 
@@ -61,6 +61,8 @@ function pageMain()
       <section>
         <div class="reviews-section">
           <h2>Opinión de los clientes</h2>
+          <div id="user_ratings_total_content" class="user_ratings_total_content">
+          </div>
           <div class="reviews-list">
             <div class="review" id="about_me_review">
             </div>

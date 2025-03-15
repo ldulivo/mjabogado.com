@@ -5,7 +5,7 @@ $metaDescription = "Explora en detalle los servicios principales de Mauricio Jim
 $ogTitle = "Servicios Jurídicos - Mauricio Jiménez Abogado";
 $ogDescription = "Descubre los servicios destacados de Mauricio Jiménez: derecho penal, civil, laboral, familiar, accidentes de tráfico e inmobiliario. ¡Consulta gratuita!";
 $ogImage = "";
-$ogUrl = "";
+$ogUrl = "https://mjabogado.com/serviciosdestacados/principales";
 
 function pageHeader()
 {

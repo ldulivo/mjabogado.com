@@ -1,18 +1,32 @@
 Options +FollowSymlinks
-
 RewriteEngine On
+
+# Redirección de HTTP a HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Regla redirecciones www a no-www
+RewriteCond %{HTTP_HOST} ^www\.mjabogado\.com [NC]
+RewriteRule ^(.*)$ https://mjabogado.com/$1 [L,R=301]
+
+# Redirecciones index a root
+Redirect 301 /index https://mjabogado.com/
+
+# Redirección de /index.php a /
+RewriteCond %{THE_REQUEST} \s/index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [L,R=301]
 
 # Restricción de acceso al archivo env.php
 <Files "env.php">
     Require all denied
 </Files>
 
-# Regla Sitemap
-RewriteRule ^sitemap\.xml$ sitemap.php [L]
-
 # Excepción para robots.txt
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/robots\.txt$ [NC]
+
+# Regla Sitemap
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
 # Reglas de reescritura
 RewriteCond %{REQUEST_FILENAME} !-f

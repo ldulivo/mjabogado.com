@@ -5,7 +5,7 @@ $metaDescription = "Explora los videos de Mauricio Jiménez, abogado en Murcia. 
 $ogTitle = "Videos Legales - Consejos y Tips de Mauricio Jiménez";
 $ogDescription = "Descubre videos legales de calidad sobre consejos, tips y curiosidades del mundo jurídico. Aprende de Mauricio Jiménez, abogado en Murcia.";
 $ogImage = "";
-$ogUrl = "https://www.mjabogado.com/videos";
+$ogUrl = "https://mjabogado.com/videos";
 
 use core\Conf;
 

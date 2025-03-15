@@ -14,7 +14,7 @@ class serviceApi {
     $placeId = self::$env["googleMaps"]["placeId"];
 
     // Construir la URL de la API de Google
-    $googleApiUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&fields=name,rating,reviews&language=es&key=$apiKey";
+    $googleApiUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id=$placeId&fields=name,rating,reviews,user_ratings_total&language=es&key=$apiKey";
 
     // Realizar la solicitud a la API de Google
     $response = file_get_contents($googleApiUrl);

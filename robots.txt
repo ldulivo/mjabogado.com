@@ -1,9 +1,8 @@
 User-agent: *
 
-Disallow: /serviciosdestacados/
 Disallow: /env.php
 Disallow: /config.php
 
 Allow: /
 
-Sitemap: https://www.mjabogado.com/sitemap.xml
+Sitemap: https://mjabogado.com/sitemap.xml
